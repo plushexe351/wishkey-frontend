@@ -15,14 +15,14 @@ const Friends = () => {
       }}
     >
       <h1 className="title">Friends</h1>
-      <Search value="friends" />
       <motion.div
-        className={`page-main padded ${searchBarOpen ? "blur" : ""}`}
+        className={`page-main padded `}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
       >
-        <div className="friends-list">
+        <Search value="friends" />
+        <div className={`friends-list ${searchBarOpen ? "blur" : ""}`}>
           <div className="friend">
             <img src={pfp} alt="" className="profile-image" />
             <div className="friend--info">

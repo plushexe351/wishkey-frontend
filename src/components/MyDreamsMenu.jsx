@@ -1,9 +1,9 @@
 import { Plus } from "react-feather";
 import pfp from "../assets/pfp.jpeg";
 
-const MyDreamsMenu = () => {
+const MyDreamsMenu = ({ blur }) => {
   return (
-    <div className="menu">
+    <div className={`menu ${blur ? "blur" : ""}`}>
       <div className="row all-dreams">
         <div className="all-dreams-title">All dreams</div>
         <div className="number-of-dreams">3</div>
