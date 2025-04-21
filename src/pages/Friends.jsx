@@ -16,7 +16,6 @@ const Friends = () => {
       }}
     >
       <h1 className="title">Friends</h1>
-      <Stories />
       <motion.div
         className={`page-main padded `}
         initial={{ opacity: 0, y: 50 }}
@@ -24,6 +23,8 @@ const Friends = () => {
         exit={{ opacity: 0, y: -50 }}
       >
         <Search value="friends" />
+        <Stories />
+
         <div className={`friends-list ${searchBarOpen ? "blur" : ""}`}>
           <div className="friend">
             <img src={pfp} alt="" className="profile-image" />
