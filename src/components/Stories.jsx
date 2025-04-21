@@ -4,7 +4,7 @@ import pfp2 from "../assets/pfp2.jpeg";
 import pfp3 from "../assets/pfp3.jpeg";
 import pfp4 from "../assets/pfp4.jpeg";
 import pfp5 from "../assets/pfp5.jpeg";
-import { Plus } from "lucide-react";
+import { Plus } from "react-feather";
 
 const Stories = () => {
   return (
