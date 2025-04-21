@@ -21,7 +21,7 @@ const Search = ({ value }) => {
           layout
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
           style={{
-            width: searchBarOpen ? "100%" : "40px",
+            width: searchBarOpen ? "calc(100% - 2rem)" : "40px",
           }}
         >
           <Sr

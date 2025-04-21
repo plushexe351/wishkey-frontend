@@ -18,14 +18,16 @@ const MyDreams = () => {
         setSearchBarOpen(false);
       }}
     >
-      <div className="title">My dreams</div>
+      <div className="title">
+        My dreams <Search value="dreams" />
+      </div>
       <motion.div
         className={`page-main`}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
       >
-        <Search value="dreams" />
+        {/* <Search value="dreams" /> */}
         <MyDreamsMenu blur={searchBarOpen} />
         <div className={`dreams ${searchBarOpen ? "blur" : ""}`}>
           <div className="dream">
