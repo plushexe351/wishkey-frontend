@@ -3,6 +3,7 @@ import pfp from "../assets/pfp.jpeg";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import { useUIContext } from "../context/UIContext";
+import Stories from "../components/Stories";
 
 const Friends = () => {
   const { searchBarOpen, setSearchBarOpen } = useUIContext();
@@ -15,6 +16,7 @@ const Friends = () => {
       }}
     >
       <h1 className="title">Friends</h1>
+      <Stories />
       <motion.div
         className={`page-main padded `}
         initial={{ opacity: 0, y: 50 }}
