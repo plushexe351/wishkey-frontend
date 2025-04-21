@@ -1,0 +1,28 @@
+.friend {
+  background-color: var(--white);
+  color: var(--text-primary);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.2rem;
+  border-radius: 1.5rem;
+  .friend--info {
+    min-height: 65px;
+    flex: 1;
+    line-height: 1.5;
+    .friend--name {
+      font-size: 1.2rem;
+    }
+    .friend--date-added {
+      font-family: helvetica;
+      font-weight: 300;
+      color: var(--gray-400);
+    }
+  }
+  img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+  }
+}

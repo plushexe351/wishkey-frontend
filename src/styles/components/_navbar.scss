@@ -1,0 +1,42 @@
+@use "../abstracts/mixins" as *;
+
+.navbar {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  @include smallDevice {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .nav-item,
+  .btn--add-dream {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    height: 65px;
+    padding-inline: 1rem;
+    border-radius: 1.2rem;
+    white-space: nowrap;
+    // overflow: hidden;
+  }
+
+  .nav-item.active {
+    background-color: var(--primary-color);
+    .icon {
+      stroke: var(--white);
+    }
+  }
+
+  .nav-item .icon {
+    stroke: var(--gray-400);
+  }
+
+  .btn--add-dream {
+    background-color: var(--primary-light);
+    color: var(--black);
+  }
+}

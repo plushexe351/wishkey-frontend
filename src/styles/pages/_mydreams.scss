@@ -1,0 +1,248 @@
+@use "../abstracts/mixins" as *;
+
+.mydreams {
+  .menu {
+    max-width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    .all-dreams {
+      background-color: var(--primary-dark);
+      color: var(--black);
+      border-radius: 1.5rem;
+      padding: 1rem;
+      min-width: 130px;
+    }
+    .row:first-of-type {
+      margin-left: 1rem;
+    }
+    .row {
+      height: 250px;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-direction: column;
+      gap: 0.5rem;
+      &:nth-of-type(2) {
+        > * {
+          flex: 1;
+        }
+      }
+    }
+
+    .row:nth-of-type(2) {
+      flex: 1;
+      overflow: hidden;
+    }
+    .categories {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 0.5rem;
+      overflow: auto;
+      width: 100%;
+      padding-right: 1rem;
+      @include smallDevice {
+        border-radius: 1.2rem 0 0 1.2rem;
+      }
+      .btn--add-category {
+        height: 100%;
+        min-width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.5rem;
+        border: 2px dashed var(--primary-color);
+      }
+      .category {
+        flex: 1;
+        flex-shrink: 0 !important;
+        min-width: 90px;
+        min-width: max-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        height: 100%;
+        flex-direction: column;
+        padding: 1rem;
+        padding-right: 40px;
+        border-radius: 1.5rem;
+        background-color: var(--primary-color);
+      }
+    }
+    .friends {
+      width: calc(100% - 1rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-direction: column;
+      padding: 1rem;
+      border-radius: 1.5rem;
+      background-color: var(--primary-light);
+      color: var(--black);
+      .friends-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        .friends-list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-left: -10px;
+            outline: 2px solid var(--primary-light);
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+    .number-of-friends,
+    .number-of-dreams,
+    .items-in-category {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+
+  .dreams {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    @include smallDevice {
+      flex-direction: column;
+    }
+    .dream {
+      max-width: 100%;
+      position: relative;
+      flex: 1;
+      min-width: calc(100% / 3.5);
+      background-color: var(--white);
+      border-radius: 1.5rem;
+      color: var(--black);
+      overflow: hidden;
+      @include smallDevice {
+        padding: 1rem;
+        min-width: 100%;
+        overflow: visible;
+      }
+      &::after {
+        content: "";
+        background-color: white;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: calc(70px + 0.5rem);
+        bottom: 0;
+        border-radius: 0 0 1.2rem 0;
+        box-shadow: 5px 5px 0 2px black;
+      }
+      &::before {
+        content: "";
+        background-color: white;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: 0;
+        bottom: calc(70px + 0.5rem);
+        border-radius: 0 0 1.2rem 0;
+        box-shadow: 5px 5px 0 4px black;
+      }
+      .dream-info {
+        padding: 1rem;
+        .dream-title {
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+        .dream-description {
+          color: var(--gray-400);
+          font-size: 1rem;
+          font-weight: 400;
+          margin-top: 0.5rem;
+        }
+        .dream-price {
+          margin-top: 1rem;
+          font-size: 2rem;
+        }
+        .where-to-get {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding: 1rem;
+          border-radius: 1.2rem;
+          width: 70px;
+          height: 70px;
+          outline: 0.5rem solid black;
+          background-color: var(--primary-light);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &::before {
+            content: "";
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            background-color: black;
+            top: -5px;
+            border-radius: 50%;
+            right: -4px;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            background-color: black;
+            bottom: -4px;
+            border-radius: 50%;
+            left: -9px;
+          }
+        }
+      }
+    }
+    .dream-images {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      overflow: scroll;
+      width: 100%;
+      @include smallDevice {
+        padding: 0;
+        padding-bottom: 1rem;
+        padding-inline: 2rem;
+        margin-left: -2rem;
+        margin-top: -2rem;
+        width: 100vw;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        overflow: scroll;
+      }
+    }
+    img {
+      box-shadow: -8px 6px 8px rgba(0, 0, 0, 0.153);
+      border-radius: 1.2rem;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}

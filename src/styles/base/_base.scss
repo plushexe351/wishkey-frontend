@@ -1,0 +1,75 @@
+@use "../abstracts/mixins" as *;
+
+:root {
+  font-family: syne, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #e5e5f7;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #e5e5f7 10px
+    ),
+    repeating-linear-gradient(#b39af955, #b39af9);
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: gray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: gray transparent;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.blur {
+  filter: blur(1rem);
+  pointer-events: none;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 2rem;
+  @include smallDevice {
+    padding: 0;
+  }
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 100%;
+  background-color: var(--black);
+  border-radius: 2rem;
+  height: calc(100vh - 4rem);
+  @include smallDevice {
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+button {
+  all: unset;
+}
