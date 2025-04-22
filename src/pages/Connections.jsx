@@ -4,9 +4,12 @@ import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import { useUIContext } from "../context/UIContext";
 import Stories from "../components/Stories";
+import FriendsList from "../components/FriendsList";
+import { Outlet } from "react-router";
+import ConnectionsMenu from "../components/ConnectionsMenu";
 
 const Connections = () => {
-  const { searchBarOpen, setSearchBarOpen } = useUIContext();
+  const { setSearchBarOpen } = useUIContext();
   return (
     <div
       className="page connections"
@@ -17,93 +20,15 @@ const Connections = () => {
     >
       <h1 className="title">Connections</h1>
       <motion.div
-        className={`page-main padded `}
+        className={`page-main `}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
       >
         <Search value="friends" />
         <Stories />
-
-        <div className={`friends-list ${searchBarOpen ? "blur" : ""}`}>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-          <div className="friend">
-            <img src={pfp} alt="" className="profile-image" />
-            <div className="friend--info">
-              <h3 className="friend--name">Big Snoop</h3>
-              <p className="friend--date-added">Date</p>
-            </div>
-          </div>
-        </div>
+        <ConnectionsMenu />
+        <Outlet />
       </motion.div>
       <Navbar />
     </div>

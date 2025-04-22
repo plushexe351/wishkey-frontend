@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from "react-router";
 const navitems = [
   { name: "My dreams", icon: Gift, path: "/mydreams" },
   { name: "Transactions", icon: ShoppingBag, path: "/transactions" },
-  { name: "Connections", icon: Users, path: "/friends" },
+  { name: "Connections", icon: Users, path: "/connections" },
 ];
 
 const Navbar = () => {
@@ -19,14 +19,14 @@ const Navbar = () => {
           whileTap={{ scale: 0.9 }}
           key={index}
           className={`nav-item ${
-            location.pathname === item.path ? "active" : ""
+            location.pathname.startsWith(item.path) ? "active" : ""
           }`}
           onClick={() => {
             navigate(item.path);
           }}
         >
           {<item.icon size={20} className="icon" />}
-          {location.pathname === item.path && (
+          {location.pathname.startsWith(item.path) && (
             <motion.p
               initial={{ opacity: 0, x: -50, width: "0%" }}
               animate={{ opacity: 1, x: 0, width: "auto" }}
