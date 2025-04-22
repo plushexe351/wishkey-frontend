@@ -1,5 +1,6 @@
-import { Plus } from "react-feather";
+import { Edit, Edit2, Edit3, MoreHorizontal, Plus } from "react-feather";
 import pfp from "../assets/pfp.jpeg";
+import { Edit2Icon } from "lucide-react";
 
 const MyDreamsMenu = ({ blur }) => {
   return (
@@ -10,8 +11,13 @@ const MyDreamsMenu = ({ blur }) => {
       </div>
       <div className="row">
         <div className="categories">
-          <div className="btn--add-category">
-            <Plus />
+          <div className="actions">
+            <div className="btn--add-category">
+              <Plus className="icon" />
+            </div>
+            <div className="btn--add-category">
+              <Edit2 className="icon" />
+            </div>
           </div>
 
           <div className="category">

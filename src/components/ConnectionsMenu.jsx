@@ -5,6 +5,7 @@ import { useUIContext } from "../context/UIContext";
 const menuItems = [
   { name: "Friends", path: "/connections/friends" },
   { name: "Followers", path: "/connections/followers" },
+  { name: "Following", path: "/connections/following" },
   { name: "Requests", path: "/connections/requests" },
 ];
 

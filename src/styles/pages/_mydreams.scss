@@ -47,8 +47,19 @@
       @include smallDevice {
         border-radius: 1.2rem 0 0 1.2rem;
       }
-      .btn--add-category {
+      .actions {
         height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        .icon {
+          stroke: var(--primary-color);
+        }
+      }
+      .btn--add-category {
+        flex: 1;
         min-width: 80px;
         display: flex;
         justify-content: center;

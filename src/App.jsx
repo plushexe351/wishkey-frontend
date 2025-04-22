@@ -24,6 +24,14 @@ function App() {
             }
           />
           <Route
+            path="following"
+            element={
+              <h1 style={{ paddingInline: "1rem" }}>
+                Users you follow will be visible here
+              </h1>
+            }
+          />
+          <Route
             path="requests"
             element={
               <h1 style={{ paddingInline: "1rem" }}>
