@@ -6,6 +6,9 @@ import pfp4 from "../assets/pfp4.jpeg";
 import pfp5 from "../assets/pfp5.jpeg";
 import { Plus } from "react-feather";
 
+// Note : Hardcoded data for now
+// TODO : Fetch data from the server
+
 const Stories = () => {
   return (
     <div className="stories">

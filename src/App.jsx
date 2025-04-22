@@ -40,7 +40,33 @@ function App() {
             }
           />
         </Route>
-        <Route path="/transactions" element={<Transactions />} />
+        <Route path="/transactions" element={<Transactions />}>
+          <Route path="" element={<Navigate to="all" />} />
+          <Route
+            path="all"
+            element={
+              <h1 style={{ paddingInline: "1rem" }}>
+                All transactions will be visible here
+              </h1>
+            }
+          />
+          <Route
+            path="giftsReceived"
+            element={
+              <h1 style={{ paddingInline: "1rem" }}>
+                Gifts you received will be visible here
+              </h1>
+            }
+          />
+          <Route
+            path="giftsSent"
+            element={
+              <h1 style={{ paddingInline: "1rem" }}>
+                Gifts you sent will be visible here
+              </h1>
+            }
+          />
+        </Route>
       </Routes>
     </div>
   );

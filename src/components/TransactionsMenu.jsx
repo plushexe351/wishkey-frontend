@@ -1,14 +1,16 @@
 import { useLocation, useNavigate } from "react-router";
 import { useUIContext } from "../context/UIContext";
 
+// Note : Hardcoded data for now
+// TODO : Fetch data from the server
+
 const menuItems = [
-  { name: "Friends", path: "/connections/friends" },
-  { name: "Followers", path: "/connections/followers" },
-  { name: "Following", path: "/connections/following" },
-  { name: "Requests", path: "/connections/requests" },
+  { name: "All", path: "/transactions/all" },
+  { name: "You Gifted", path: "/transactions/giftsReceived" },
+  { name: "They Gifted", path: "/transactions/giftsSent" },
 ];
 
-const ConnectionsMenu = () => {
+const TransactionsMenu = () => {
   const { searchBarOpen } = useUIContext();
   const Navigate = useNavigate();
   const Location = useLocation();
@@ -31,4 +33,4 @@ const ConnectionsMenu = () => {
   );
 };
 
-export default ConnectionsMenu;
+export default TransactionsMenu;

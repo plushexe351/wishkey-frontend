@@ -7,6 +7,9 @@ import pfp5 from "../assets/pfp5.jpeg";
 import { useUIContext } from "../context/UIContext";
 import { motion } from "framer-motion";
 
+// Note : Hardcoded data for now
+// TODO : Fetch data from the server
+
 const FriendsList = () => {
   const { searchBarOpen } = useUIContext();
   return (

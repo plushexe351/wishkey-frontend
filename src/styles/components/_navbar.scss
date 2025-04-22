@@ -11,7 +11,7 @@
     justify-content: space-between;
   }
   .nav-item,
-  .btn--add-dream {
+  .btn--menu-add {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@
     stroke: var(--gray-400);
   }
 
-  .btn--add-dream {
+  .btn--menu-add {
     background-color: var(--primary-light);
     color: var(--black);
   }

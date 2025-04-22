@@ -5,13 +5,13 @@ import { useEffect, useRef } from "react";
 
 const Search = ({ value }) => {
   const { searchBarOpen, setSearchBarOpen } = useUIContext();
-  const inputRef = useRef(null); // Create a ref for the input element
+  const inputRef = useRef(null);
 
   useEffect(() => {
     if (searchBarOpen && inputRef.current) {
-      inputRef.current?.focus(); // Focus the input when searchBarOpen is true
+      inputRef.current?.focus();
     }
-  }, [searchBarOpen]); // Run this effect whenever searchBarOpen changes
+  }, [searchBarOpen]);
 
   return (
     <div className="searchContainer">
@@ -33,7 +33,7 @@ const Search = ({ value }) => {
           />
           {searchBarOpen && (
             <motion.input
-              ref={inputRef} // Attach the ref to the input element
+              ref={inputRef}
               initial={{ opacity: 0, width: "0%", x: -50 }}
               animate={{ opacity: 1, width: "100%", x: 0 }}
               exit={{ opacity: 0, width: "0%", x: -50 }}

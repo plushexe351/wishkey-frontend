@@ -1,6 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Gift, Plus, ShoppingBag, Users } from "react-feather";
+import {
+  FolderPlus,
+  Gift,
+  Plus,
+  ShoppingBag,
+  UserPlus,
+  Users,
+} from "react-feather";
 import { useNavigate, useLocation } from "react-router";
+import { useUIContext } from "../context/UIContext";
+import ModalWrapper from "./ModalWrapper";
+import { BookPlus, FilePlus, Grid2X2Plus } from "lucide-react";
 
 const navitems = [
   { name: "My dreams", icon: Gift, path: "/mydreams" },
@@ -9,6 +19,8 @@ const navitems = [
 ];
 
 const Navbar = () => {
+  const { openModal, activeModal } = useUIContext();
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -39,9 +51,24 @@ const Navbar = () => {
           )}
         </motion.div>
       ))}
-      <button className="btn--add-dream">
+      <button className="btn--menu-add" onClick={() => openModal("menu-add")}>
         <Plus size={30} className="icon" />
       </button>
+      <AnimatePresence>
+        {activeModal === "menu-add" && (
+          <ModalWrapper name="menu-add">
+            <div className="action">
+              Add Dream <Grid2X2Plus size={15} className="icon" />
+            </div>
+            <div className="action">
+              Add Category <FolderPlus size={15} className="icon" />
+            </div>
+            <div className="action">
+              Add Connection <UserPlus size={15} className="icon" />
+            </div>
+          </ModalWrapper>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
