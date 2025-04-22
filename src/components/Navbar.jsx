@@ -6,11 +6,11 @@ import {
   ShoppingBag,
   UserPlus,
   Users,
+  Cloud,
 } from "react-feather";
 import { useNavigate, useLocation } from "react-router";
 import { useUIContext } from "../context/UIContext";
 import ModalWrapper from "./ModalWrapper";
-import { BookPlus, FilePlus, Grid2X2Plus } from "lucide-react";
 
 const navitems = [
   { name: "My dreams", icon: Gift, path: "/mydreams" },
@@ -58,7 +58,7 @@ const Navbar = () => {
         {activeModal === "menu-add" && (
           <ModalWrapper name="menu-add">
             <div className="action">
-              Add Dream <Grid2X2Plus size={15} className="icon" />
+              Add Dream <Cloud size={15} className="icon" />
             </div>
             <div className="action">
               Add Category <FolderPlus size={15} className="icon" />
