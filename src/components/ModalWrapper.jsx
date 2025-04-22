@@ -16,9 +16,9 @@ const ModalWrapper = ({ children, name }) => {
       }}
     >
       <motion.div
-        initial={{ scale: 0.9 }}
-        animate={{ scale: 1 }}
-        exit={{ scale: 0.9 }}
+        initial={{ y: 100 }}
+        animate={{ y: 0 }}
+        exit={{ y: 100 }}
         transition={{ duration: 0.2 }}
         className={`modal-content ${name}`}
         onClick={(e) => {
