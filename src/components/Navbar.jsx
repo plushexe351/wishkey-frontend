@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from "react-router";
 const navitems = [
   { name: "My dreams", icon: Gift, path: "/mydreams" },
   { name: "Transactions", icon: ShoppingBag, path: "/transactions" },
-  { name: "Friends", icon: Users, path: "/friends" },
+  { name: "Connections", icon: Users, path: "/friends" },
 ];
 
 const Navbar = () => {

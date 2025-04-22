@@ -5,17 +5,17 @@ import { motion } from "framer-motion";
 import { useUIContext } from "../context/UIContext";
 import Stories from "../components/Stories";
 
-const Friends = () => {
+const Connections = () => {
   const { searchBarOpen, setSearchBarOpen } = useUIContext();
   return (
     <div
-      className="page friends"
+      className="page connections"
       onClick={(e) => {
         e.stopPropagation();
         setSearchBarOpen(false);
       }}
     >
-      <h1 className="title">Friends</h1>
+      <h1 className="title">Connections</h1>
       <motion.div
         className={`page-main padded `}
         initial={{ opacity: 0, y: 50 }}
@@ -110,4 +110,4 @@ const Friends = () => {
   );
 };
 
-export default Friends;
+export default Connections;

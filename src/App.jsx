@@ -1,7 +1,7 @@
 import Menubar from "./components/Menubar.jsx";
 import { Navigate, Route, Routes } from "react-router";
 import MyDreams from "./pages/MyDreams.jsx";
-import Friends from "./pages/Friends.jsx";
+import Connections from "./pages/Connections.jsx";
 import Transactions from "./pages/Transactions.jsx";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/mydreams" />} />
         <Route path="/mydreams" element={<MyDreams />} />
-        <Route path="/friends" element={<Friends />} />
+        <Route path="/friends" element={<Connections />} />
         <Route path="/transactions" element={<Transactions />} />
       </Routes>
     </div>
