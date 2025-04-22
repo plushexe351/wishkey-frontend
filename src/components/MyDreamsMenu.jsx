@@ -1,6 +1,5 @@
-import { Edit, Edit2, Edit3, MoreHorizontal, Plus } from "react-feather";
+import { Edit2, Plus } from "react-feather";
 import pfp from "../assets/pfp.jpeg";
-import { Edit2Icon } from "lucide-react";
 
 const MyDreamsMenu = ({ blur }) => {
   return (
