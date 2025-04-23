@@ -3,6 +3,10 @@ import MyDreamsMenu from "../components/MyDreamsMenu";
 import dior from "../assets/dior.jpeg";
 import dior2 from "../assets/dior2.jpeg";
 import dior3 from "../assets/dior3.jpeg";
+import ps5 from "../assets/ps5.jpeg";
+import ps5_2 from "../assets/ps5_2.jpeg";
+import ps5_3 from "../assets/ps5_3.jpeg";
+import ps5_4 from "../assets/ps5_4.jpeg";
 import { motion } from "framer-motion";
 import { Link } from "react-feather";
 import Search from "../components/Search";
@@ -45,6 +49,26 @@ const MyDreams = () => {
               </div>
 
               <div className="dream-price">$7129.69</div>
+              <div className="where-to-get">
+                <Link />
+              </div>
+            </div>
+          </div>
+          <div className="dream">
+            <div className="dream-images">
+              {/* <img src={ps5} alt="" className="dream-image" /> */}
+              <img src={ps5_2} alt="" className="dream-image" />
+              <img src={ps5_4} alt="" className="dream-image" />
+              <img src={ps5_3} alt="" className="dream-image" />
+            </div>
+            <div className="dream-info">
+              <div className="dream-title">Sony PlayStation 5</div>
+              <div className="dream-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Impedit, accusamus.
+              </div>
+
+              <div className="dream-price">$479</div>
               <div className="where-to-get">
                 <Link />
               </div>
